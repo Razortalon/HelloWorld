@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <link href="~/css/start.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="header">
+        <div id="logo"><img  onclick="Home()" src="~/Image/logo/mth.png" /></div>
+        <div id="banner">
+            <ul>
+                <li>
+                    <a>博客</a>
+                </li>
+                <li>
+                    <a onclick="Text()">游戏</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    @RenderBody()
+
+    <script>
+        function Home() {
+            window.location.href = "/MoTa/Home";
+        }
+        function Text() {
+            window.location.href = "/MoTa/Test";
+        }
+    </script>
+</body>
+</html>
+

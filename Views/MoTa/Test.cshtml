@@ -1,0 +1,70 @@
+﻿@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Test</title>
+    <link href="~/css/map.css" rel="stylesheet" />
+</head>
+<body>
+                <table cellpadding="0" cellspacing="0" style="margin:auto;">
+                    <tr>
+                        <td>
+                            <canvas id="goods"></canvas>
+                        </td>
+                        <td style="position:relative">
+                            <canvas id="map"></canvas>
+
+                            <div id="back"style="display: none;"></div>
+
+                            <div id="man"style="display: none;">
+                                <p id="mantext"></p>
+                                <em>/按回车键返回</em>
+                            </div>
+
+                            <div id="woman"style="display: none;">
+                                <textarea id="womantext"></textarea>
+                                <button id="yes">[Y]我太需要了</button>
+                                <button id="no">[N]下次再说</button>
+                            </div>
+
+                            <div id="child"style="display: none;">
+                                <p id="childtext"></p>
+                                <input id="pass" type="button" style="display:none" />
+                                <em>/按回车键继续</em>
+                            </div>
+
+                            <div id="boss"style="display: none;">
+                                <p id="bosstext"></p>
+                            </div>
+
+                            <div id="talk"style="display: none;">
+                                <p id="talktext"></p>
+                                <input id="goon" type="button" style="display:none" />
+                                <em>/按回车键继续</em>
+                            </div>
+
+                            <div id="store"style="display: none;text-align:center;">
+                                <strong id="storetext" style="margin-top:5px;"></strong>
+                                <input type="button" id="buyhp"/>
+                                <input type="button" id="buyatt"/>
+                                <input type="button" id="buydef"/>
+                                <input type="button" id="quit" value="<Q>谢谢，下次再说"/>
+                            </div>
+
+                        </td>
+                        <td>
+                            <canvas id="arms"></canvas>
+                        </td>
+                    </tr>
+                </table>
+    <script src="~/js/Onkeydown.js"></script>
+</body>
+
+
+
+</html>
