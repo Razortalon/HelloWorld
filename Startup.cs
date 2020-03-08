@@ -3,8 +3,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using HelloWorld.Repositories;
-
+using SignalRChat.Hubs;
 
 namespace HelloWorld
 {
@@ -20,10 +19,9 @@ namespace HelloWorld
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public static void ConfigureServices(IServiceCollection services)
         {
+            services.AddSignalR();
             services.AddRazorPages();
-            services.AddTransient<TutorialDbContext>();
-            services.AddControllersWithViews();
-            
+            services.AddControllersWithViews();   
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -37,10 +35,13 @@ namespace HelloWorld
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();//静态文件
+            app.UseFileServer();
             app.UseRouting();//根据请求找到endpoints
             app.UseAuthentication();
             app.UseEndpoints(endpoints =>//执行endpoints
             {
+                endpoints.MapHub<ChatHub>("/chatHub");
+
                 endpoints.MapControllerRoute(
                     name: "View",
                     pattern: "{controller=MoTa}/{action=Home}"

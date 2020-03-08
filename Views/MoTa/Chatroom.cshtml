@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = "_Layout";
+}
+
+    <link href="~/css/chatroom.css" rel="stylesheet" />
+
+    <div>
+        <ul id="tianchong"></ul>
+    </div>
+    <div>
+        <ul id="messagesList"></ul>
+    </div>
+    <div class="input">
+        <div>
+            <div><input type="text" id="userInput" /></div>
+        </div>
+        <div id="buttondiv" style="position:relative">
+            <input type="text" id="messageInput" />
+            <input type="button" id="sendButton" value="发送" />
+        </div>
+    </div>
+
+    
+<script src="~/js/signalr.js"></script>
+<script src="~/js/chat.js"></script>
+

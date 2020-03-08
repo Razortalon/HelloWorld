@@ -12,5 +12,9 @@ namespace HelloWorld.Controllers
         {
             return View();
         }
+        public IActionResult Chatroom()
+        {
+            return View();
+        }
     }
 }

@@ -1,0 +1,52 @@
+﻿body {
+    text-align: center;
+    padding:0px;
+        
+}
+.input {
+    margin: 0 auto;
+}
+#tianchong{
+    height:50px;
+    width:800px;
+    margin:0 auto;
+}
+#messagesList {
+    height:300px;
+    width:800px;
+    overflow: auto;
+    background: Lavender;
+    text-align:left;
+    margin:auto;
+}
+#userInput {
+    height: 30px;
+    width: 840px;
+    background: PaleGoldenRod;
+    margin: auto;
+    outline: none;
+    border: 0px;
+}
+#messageInput {
+    height: 80px;
+    width: 840px;
+    background: Gainsboro;
+    margin: 0 auto;
+    outline: none;
+    border: 0px;
+}
+#sendButton {
+    position: absolute;
+    right: 10px;
+    top: 50px;
+    height: 25px;
+    width: 60px;
+    background: Azure;
+    margin: 0 auto;
+    border: 0px;
+}
+#buttondiv{
+    height:80px;
+    width:840px;
+    margin:0 auto;
+}
